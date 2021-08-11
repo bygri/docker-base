@@ -11,6 +11,6 @@ RUN apk add --no-cache  --virtual .build \
     pcre \
     mariadb-dev \
   && python3 -m pip install --no-cache-dir \
-    uwsgi \
-    mysqlclient \
+    uwsgi~=2.0 \
+    mysqlclient~=2.0 \
   && apk del .build

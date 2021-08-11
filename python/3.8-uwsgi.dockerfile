@@ -10,5 +10,5 @@ RUN apk add --no-cache  --virtual .build \
     mailcap \
     pcre \
   && python3 -m pip install --no-cache-dir \
-    uwsgi \
+    uwsgi~=2.0 \
   && apk del .build
