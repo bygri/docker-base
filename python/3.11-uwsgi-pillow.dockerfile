@@ -1,4 +1,4 @@
-FROM python:3.7-alpine
+FROM python:3.11-alpine
 
 EXPOSE 80
 
@@ -9,6 +9,8 @@ RUN apk add --no-cache  --virtual .build \
     git \
     mailcap \
     pcre \
+    freetype-dev jpeg-dev lcms2-dev openjpeg-dev zlib-dev \
   && python3 -m pip install --no-cache-dir \
     uwsgi~=2.0 \
+    Pillow~=9.4 \
   && apk del .build
