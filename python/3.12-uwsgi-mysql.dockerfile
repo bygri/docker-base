@@ -1,4 +1,4 @@
-FROM python:3.10-alpine
+FROM python:3.12-alpine
 
 EXPOSE 80
 
@@ -11,6 +11,6 @@ RUN apk add --no-cache  --virtual .build \
     pcre \
     mariadb-dev \
   && python3 -m pip install --no-cache-dir \
-    uwsgi~=2.0.20 \
-    mysqlclient~=2.1 \
+    uwsgi~=2.0 \
+    mysqlclient~=2.2 \
   && apk del .build
